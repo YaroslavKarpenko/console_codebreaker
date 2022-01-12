@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/YaroslavKarpenko/gem_codebreaker.git
-  revision: 1f0d02ccba7ba41c0c6362ba16f012345cc9aeb6
+  revision: 6de48c3f121c25497abe6f46d7e7190e4c68e3e8
   branch: develop
   specs:
     codebreaker (0.1.0)
