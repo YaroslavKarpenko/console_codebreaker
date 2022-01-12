@@ -1,0 +1,6 @@
+coverage
+spec/fixtures
+.vscode
+storage/players.yml
+vendor
+.bundle
