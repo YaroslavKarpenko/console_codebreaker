@@ -21,7 +21,8 @@ class Console
   def start_game
     @codebreaker_game = Codebreaker::Game.new
     registration
-    @codebreaker_game.start
+    @codebreaker_game.available_difficulties
+
     game
   end
 
@@ -36,6 +37,7 @@ class Console
   def registration
     input_name
     input_difficulty
+    @codebreaker_game.assign_difficulty
   end
 
   def input_name
@@ -89,7 +91,7 @@ class Console
   end
 
   def guess_passed(guess)
-    matrix = @codebreaker_game.generate_matrix(guess.chars.map(&:to_i))
+    matrix = @codebreaker_game.display_matrix(guess.chars.map(&:to_i))
     @codebreaker_game.win?(guess.chars.map(&:to_i)) ? win_output : View.matrix(matrix)
   rescue InputError
     View.guess_input_error
